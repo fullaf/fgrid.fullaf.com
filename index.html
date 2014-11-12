@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    fGrid &middot; SASS Responsive Grid System
+    fGrid &middot; Sass Responsive Grid System
   </title>
   <meta name="viewport" content="width=device-width, initial- scale=1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Currently experimental feature -->
@@ -20,7 +20,7 @@
   <header class="grid-wrap">
     <div class="grid-row">
       <div class="grid-12">
-        <h1>fGrid &middot; SASS Responsive Grid System <span class="tag">alpha</span></h1>
+        <h1>fGrid &middot; Sass Responsive Grid System <span class="tag">alpha</span></h1>
       </div>
     </div>
   </header>
@@ -28,7 +28,7 @@
   <div class="grid-wrap content">
 
     <div class="demo-three-points">
-      <!-- No fGrid classes here, instead see the SASS file and use of @extend -->
+      <!-- No fGrid classes here, instead see the Sass file and use of @extend -->
       <!-- This is the preferred way of using fGrid, we use the classes in the HTML here to be more helpful as an example. -->
       <div class="point">
         <i class="ion-ios7-stopwatch-outline big-icon"></i>
@@ -46,16 +46,16 @@
 
     <div class="grid-row">
       <div class="grid-8">
-        <p>fGrid is a responsive and customisable grid system for SASS styled websites. It's built to be flexible and small and is suitable for a wide range of projects.</p>
+        <p>fGrid is a responsive and customisable grid system for Sass styled websites. It's built to be flexible and small and is suitable for a wide range of projects.</p>
         <p class="alpha">
           <strong>Please Note</strong> We're currently specifying and building fGrid, docs are sparse and there's probably some nasty bugs. If you spot issues please report them!
         </p>
       </div>
       <div class="grid-4 download">
         <div class="inner">
-          <a href="http://github.com/fullaf/fgrid"><i class="ion-social-github"></i> Clone on GitHub</a>
-          <a href="http://github.com/fullaf/fgrid"><i class="ion-code-download"></i> Download tar.gz</a>
-          <a href="http://github.com/fullaf/fgrid"><i class="ion-code-download"></i> Download ZIP</a>
+          <a href="https://github.com/fullaf/fgrid"><i class="ion-social-github"></i> Clone on GitHub</a>
+          <a href="https://github.com/fullaf/fgrid/archive/master.tar.gz"><i class="ion-code-download"></i> Download tar.gz</a>
+          <a href="https://github.com/fullaf/fgrid/archive/master.zip"><i class="ion-code-download"></i> Download ZIP</a>
         </div>
       </div>
     </div>
@@ -195,9 +195,16 @@
     <div class="grid-row">
       <div class="grid-6">
         <div class="powered-by sass">
-          <img class="logo" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="SASS Logo" />
-          <h4>Powered By SASS</h4>
-          <p>SASS is cool</p>
+          <img class="logo" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="Sass Logo" />
+          <p><a href="http://sass-lang.com">Sass</a> is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+          <p>We love it for its ease of use and extensibility powers.</p>
+        </div>
+      </div>
+      <div class="grid-6">
+        <div class="powered-by bourbon">
+          <img class="logo" src="bourbon-logo.png" alt="Bourbon Logo" />
+          <p><a href="http://bourbon.io/">Bourbon</a> is a simple and lightweight mixin library for Sass.</p>
+          <p>Some of the fancy bits of fGrid need Bourbon, and frankly if you're using fGrid you should use Bourbon, it's awesome!</p>
         </div>
       </div>
     </div>
@@ -205,7 +212,7 @@
   <footer class="grid-wrap">
     <div class="grid-row">
       <div class="grid-12">
-        <h1>fGrid &middot; SASS Responsive Grid System</h1>
+        <p>&copy; <a href="http://fullaf.com">Full AF</a> 2014, fGrid is released under the <a href="http://fullaf.mit-license.org/">MIT Licence</a></p>
       </div>
     </div>
   </footer>
