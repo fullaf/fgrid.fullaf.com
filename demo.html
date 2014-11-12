@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    fGrid &middot; SASS Responsive Grid System
+  </title>
+  <meta name="viewport" content="width=device-width, initial- scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <!-- Currently experimental feature -->
+  <div class="abs-position-buttons">
+    I'm abs positioned
+  </div>
+  <!-- Here's a wrapper, we want full width backgrounds so the header has its own -->
+  <header class="grid-wrap">
+    <div class="grid-row">
+      <div class="grid-12">
+        <h1>fGrid &middot; SASS Responsive Grid System <span class="tag">alpha</span></h1>
+      </div>
+    </div>
+  </header>
+  <!-- Main body of content -->
+  <div class="grid-wrap content">
+
+    <div class="demo-three-points">
+      <!-- No fGrid classes here, instead see the SASS file and use of @extend -->
+      <!-- This is the preferred way of using fGrid, we use the classes in the HTML here to be more helpful as an example. -->
+      <div class="point">
+        <i class="ion-ios7-stopwatch-outline big-icon"></i>
+        <h2>Speed Up Development</h2>
+      </div>
+      <div class="point">
+        <i class="ion-beaker big-icon"></i>
+        <h2>Awesome Responsive Mixins</h2>
+      </div>
+      <div class="point">
+        <i class="ion-arrow-resize big-icon"></i>
+        <h2>Super Lightweight</h2>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="grid-8">
+        <p>fGrid is a responsive and customisable grid system for SASS styled websites. It's built to be flexible and small and is suitable for a wide range of projects.</p>
+        <p class="alpha">
+          <strong>Please Note</strong> We're currently specifying and building fGrid, docs are sparse and there's probably some nasty bugs. If you spot issues please report them!
+        </p>
+      </div>
+      <div class="grid-4 download">
+        <div class="inner">
+          <a href="http://github.com/fullaf/fgrid"><i class="ion-social-github"></i> Clone on GitHub</a>
+          <a href="http://github.com/fullaf/fgrid"><i class="ion-code-download"></i> Download tar.gz</a>
+          <a href="http://github.com/fullaf/fgrid"><i class="ion-code-download"></i> Download ZIP</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row demo-grid">
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+      <div class="grid-1">
+        <div class="demo-inner">
+          .grid-1
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row demo-grid">
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="demo-inner">
+          .grid-2
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row demo-grid">
+      <div class="grid-3">
+        <div class="demo-inner">
+          .grid-3
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="demo-inner">
+          .grid-3
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="demo-inner">
+          .grid-3
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="demo-inner">
+          .grid-3
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row demo-grid">
+      <div class="grid-6">
+        <div class="demo-inner">
+          .grid-6
+        </div>
+      </div>
+      <div class="grid-6">
+        <div class="demo-inner">
+          .grid-6
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="grid-6">
+        <div class="powered-by sass">
+          <img class="logo" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="SASS Logo" />
+          <h4>Powered By SASS</h4>
+          <p>SASS is cool</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="grid-wrap">
+    <div class="grid-row">
+      <div class="grid-12">
+        <h1>fGrid &middot; SASS Responsive Grid System</h1>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

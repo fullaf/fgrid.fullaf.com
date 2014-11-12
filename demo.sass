@@ -1,0 +1,130 @@
+@import "bourbon/bourbon"
+@import "fgrid/fgrid"
+
+$font-size: 16px
+$color-white: #f6f6f6
+$color-black: #222
+
+$color-highlight: #F1A42C
+
+html, body
+  margin: 0
+  padding: 0
+
+*
+  font-family: 'Open Sans', sans-serif
+  color: #333
+  margin: 0
+  padding: 0
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 100
+  margin-top: 0
+
+p
+  font-size: $font-size
+  margin-bottom: $font-size
+  line-height: $font-size * 1.5
+  .alpha
+    padding: 6px
+    background: $color-highlight
+
+::selection
+  background: #cd679a
+  color: $color-white
+::moz-selection
+  @extends ::selection
+
+header
+  background: #4D3561
+  padding: 32px 0 $font-size/2 0
+  h1
+    font-weight: 500
+    color: $color-white
+  .grid-row
+    padding-bottom: 0
+  .tag
+    display: inline-block
+    background: #F1A42C
+    padding: 2px 6px
+    font-size: 11px
+    position: relative
+    top: -24px
+
+.download
+  background: #ccc
+  // Grr! important is here as :last-child->padding-bottom:0 is more specific
+  padding: $font-size/2 !important
+  a
+    display: block
+    padding: 6px
+    margin-bottom: 6px
+    text-align: center
+    text-decoration: none
+    color: $color-white
+    background: #E85454
+    i
+      color: $color-white / 1.05
+      font-size: $font-size * 1.1
+    &:last-child
+      margin-bottom: 0
+    &:nth-child(2)
+      background: $color-highlight
+    &:nth-child(3)
+      background: #66D133
+
+
+
+.demo-grid
+  margin-bottom: $font-size / 4
+  .demo-inner
+    background: #ccc
+    font-size: 12px
+    text-transform: uppercase
+    text-align: center
+    padding: $font-size/2 0
+    @include transition(background 0.3s ease)
+    &:hover
+      background: #B5B2D3
+
+.abs-position-buttons
+  position: absolute
+  z-index: 10
+  @include abs-right-wrap-pad(0px)
+
+.demo-three-points
+  @extend .grid-row
+  .point
+    @extend .grid-4
+  h2
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 0
+    @include respond-up(mob-port)
+      font-size: 20px
+    @include respond-up(med-desk)
+      font-size: 22px
+  i.big-icon
+    display: block
+    margin: 0 auto
+    text-align: center
+    text-shadow: 0px 1px 2px #c9c9c9
+    @include respond-up(mob-port)
+      font-size: 164px
+    @include respond-up(tab-port)
+      font-size: 150px
+
+.powered-by
+  background: #ddd
+  padding: $font-size
+  img
+    display: block
+    width: 30%
+    float: left
+    padding-right: $font-size
+.sass-logo
+  width: 20%
+
+footer
+  @extend header
+  background: #333
