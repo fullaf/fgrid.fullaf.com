@@ -162,6 +162,9 @@ header
 
 .demo-grid
   margin-bottom: $font-size / 4
+  @include respond-down(mob-land)
+    display: none
+
   .demo-inner
     background: #ccc
     font-size: 12px
