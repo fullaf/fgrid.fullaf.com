@@ -195,6 +195,10 @@ footer
   padding-top: $font-size
   background: $color-black
 
+  @include respond-up(tab-port)
+    // Extra space for responsive icons
+    padding-top: 30px
+
   p
     color: $color-white / 1.2
     font-size: $font-size / 1.5 // For mobile to keep single line
@@ -215,7 +219,7 @@ footer
 
     // This is a bit hacky, used for prettier positioning
     @include respond-up(tab-port)
-      margin-top: -20px
+      margin-top: -12px
       padding-right: 22px
 
     i
