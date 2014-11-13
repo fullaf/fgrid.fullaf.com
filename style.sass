@@ -4,9 +4,11 @@
 $font-size: 16px
 $color-white: #f6f6f6
 $color-black: #222
+$color-black-alt: #666
 
 $color-theme: #4D3561
 $color-highlight: #F1A42C
+$color-minimal: #e7e7e7
 
 $color-red: #E84343
 $color-green: #66D133
@@ -16,13 +18,15 @@ html, body
   padding: 0
 
 *
-  font-family: 'Open Sans', sans-serif
   color: #333
   margin: 0
   padding: 0
 
+p, h1, h2, h3, h4, h5, h6, nav, .demo-grid, a
+  font-family: 'Open Sans', sans-serif
+
 h1, h2, h3, h4, h5, h6
-  font-weight: 100
+  font-weight: 200
   margin-top: 0
 
 p
@@ -33,6 +37,32 @@ p
     padding: 9px
     background: $color-highlight
 
+a
+  color: $color-black * 1.3
+  &:hover
+    color: $color-black * 2
+
+pre
+  background: $color-black
+  padding: $font-size
+  color: $color-white
+  white-space: pre-wrap
+  word-wrap: break-word
+  font-size: $font-size / 1.1
+  line-height: $font-size * 1.2
+  code
+    color: $color-white / 1.1
+
+code
+  font-family: "Ubuntu Mono", monospace
+  .tag
+    color: $color-red
+    font-weight: bold
+  .attr
+    color: $color-green
+  .class
+    color: $color-highlight
+
 ::selection
   background: #cd679a
   color: $color-white
@@ -42,7 +72,9 @@ p
 header
   background: $color-theme
   padding: 32px 0 $font-size/2 0
+  margin-bottom: $font-size !important // Issue #4
   h1
+    font-size: 30px
     font-weight: 500
     color: $color-white
   .grid-row
@@ -56,9 +88,51 @@ header
     font-size: 11px
     position: relative
     top: -24px
+  nav
+    @include respond-up(tab-port)
+      text-align: right
+      vertical-align: center
+    a
+      color: $color-white
+      display: inline-block
+      padding: 6px 16px
+      background: $color-black
+      text-decoration: none
+      opacity: 0.8
+      i
+        color: $color-white
+        padding-right: 4px
+      &:hover
+        color: $color-white
+        // background: $color-black-alt
+        opacity: 1
+
+
+.demo-three-points
+  @extend .grid-row
+  .point
+    @extend .grid-4
+  h2
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 0
+    color: $color-black-alt
+    @include respond-up(mob-port)
+      font-size: 20px
+    @include respond-up(med-desk)
+      font-size: 22px
+  i.big-icon
+    display: block
+    margin: 0 auto
+    text-align: center
+    text-shadow: 0px 1px 2px #c9c9c9
+    @include respond-up(mob-port)
+      font-size: 164px
+    @include respond-up(tab-port)
+      font-size: 150px
 
 .download
-  background: #ccc
+  background: $color-minimal
   // Grr! important is here as :last-child->padding-bottom:0 is more specific
   padding: $font-size/2 !important
   a
@@ -86,8 +160,6 @@ header
       &:hover
         background: $color-green * 1.2
 
-
-
 .demo-grid
   margin-bottom: $font-size / 4
   .demo-inner
@@ -96,39 +168,17 @@ header
     text-transform: uppercase
     text-align: center
     padding: $font-size/2 0
-    @include transition(background 0.3s ease)
-    &:hover
-      background: #B5B2D3
+    @include transition(background 0.2s ease)
+    &:hover, &:active
+      background: $color-highlight
 
 .abs-position-buttons
   position: absolute
   z-index: 10
   @include abs-right-wrap-pad(0px)
 
-.demo-three-points
-  @extend .grid-row
-  .point
-    @extend .grid-4
-  h2
-    text-align: center
-    text-transform: uppercase
-    margin-bottom: 0
-    @include respond-up(mob-port)
-      font-size: 20px
-    @include respond-up(med-desk)
-      font-size: 22px
-  i.big-icon
-    display: block
-    margin: 0 auto
-    text-align: center
-    text-shadow: 0px 1px 2px #c9c9c9
-    @include respond-up(mob-port)
-      font-size: 164px
-    @include respond-up(tab-port)
-      font-size: 150px
-
 .powered-by
-  background: #ddd
+  background: $color-minimal
   padding: $font-size
   img
     display: block
@@ -142,10 +192,64 @@ header
     padding-left: 33%
 
 footer
-  @extend header
+  padding-top: $font-size
+  background: $color-black
+
   p
     color: $color-white / 1.2
-    font-size: $font-size / 1.2
+    font-size: $font-size / 1.5 // For mobile to keep single line
+    @include respond-up(mob-land)
+      font-size: $font-size / 1.2
     a
       color: $color-white
-  background: #333
+      &:hover
+        color: $color-white / 1.2
+
+  .responsive-icons
+    text-align: right
+
+    font-size: 42px
+
+    @include respond-up(mob-land)
+      font-size: 52px
+
+    // This is a bit hacky, used for prettier positioning
+    @include respond-up(tab-port)
+      margin-top: -20px
+      padding-right: 22px
+
+    i
+      color: $color-black-alt
+      &.mob-port
+        @include respond-to(mob-port)
+          color: $color-highlight
+      &.mob-land
+        @include respond-to(mob-land)
+          color: $color-highlight
+        padding: 0 8px
+        &:before
+          @include transform(rotate(90deg))
+      &.tab-port
+        @include respond-to(tab-port)
+          color: $color-highlight
+      &.tab-land
+        @include respond-to(tab-land)
+          color: $color-highlight
+        padding: 0 8px
+        &:before
+          @include transform(rotate(90deg))
+      &.med-desk
+        @include respond-to(med-desk)
+          color: $color-highlight
+      &.widescreen
+        @include respond-to(widescreen)
+          color: $color-highlight
+
+  .grid-6
+    @include respond-down(mob-land)
+      padding-bottom: 0
+
+  p, .responsive-icons
+    @include respond-down(mob-land)
+      text-align: center
+
