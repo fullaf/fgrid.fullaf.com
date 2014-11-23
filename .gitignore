@@ -1,4 +1,4 @@
 *.css*
 .sass-cache
-bourbon/*
 local_files/*
+bower_components/*

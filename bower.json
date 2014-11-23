@@ -1,0 +1,20 @@
+{
+  "name": "fgrid.fullaf.com",
+  "version": "master",
+  "homepage": "https://github.com/fullaf/fgrid.fullaf.com",
+  "authors": [
+    "Will Pimblett <will@fullaf.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "*",
+    "fgrid": "*"
+  }
+}
