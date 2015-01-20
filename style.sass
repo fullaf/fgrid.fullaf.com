@@ -13,6 +13,8 @@ $color-minimal: #e7e7e7
 $color-red: #E84343
 $color-green: #66D133
 
+$baseline: 26px
+
 html, body
   margin: 0
   padding: 0
@@ -28,11 +30,18 @@ p, h1, h2, h3, h4, h5, h6, nav, .demo-grid, a
 h1, h2, h3, h4, h5, h6
   font-weight: 200
   margin-top: 0
+  line-height: $baseline
+
+h1, h2
+  line-height: $baseline * 2
+
+h2
+  font-size: 36px
 
 p
   font-size: $font-size
   margin-bottom: $font-size
-  line-height: $font-size * 1.5
+  line-height: $baseline
   &.alpha
     padding: 9px
     background: $color-highlight
@@ -62,6 +71,10 @@ code
     color: $color-green
   .class
     color: $color-highlight
+  .selector
+    color: $color-green
+  .include
+    color: $color-red
 
 ::selection
   background: #cd679a
@@ -76,6 +89,7 @@ header
   h1
     font-size: 30px
     font-weight: 500
+    line-height: 1em
     color: $color-white
   .grid-row
     padding-bottom: 0
@@ -84,6 +98,7 @@ header
     background: #F1A42C
     color: $color-theme
     font-weight: 600
+    line-height: 1.4em
     padding: 2px 6px
     font-size: 11px
     position: relative
@@ -109,9 +124,9 @@ header
 
 
 .demo-three-points
-  @extend .grid-row
+  @include grid-row
   .point
-    @extend .grid-4
+    @include grid-x-col(4)
   h2
     text-align: center
     text-transform: uppercase
@@ -132,9 +147,6 @@ header
       font-size: 150px
 
 .download
-  .inner
-    background: $color-minimal
-    padding: $font-size/2
   a
     display: block
     padding: 6px
