@@ -21,7 +21,7 @@
   <header class="grid-wrap">
     <div class="grid-row">
       <div class="grid-8">
-        <h1>fGrid &middot; Sass Responsive Grid System <span class="tag">alpha</span></h1>
+        <h1>fGrid &middot; Sass Responsive Grid System <span class="tag">1.0</span></h1>
       </div>
       <nav class="grid-4">
        <a href="https://github.com/fullaf/fGrid/blob/master/README.md"><i class="ion-bookmark"></i> Docs</a>
@@ -51,17 +51,15 @@
 
     <div class="grid-row">
       <div class="grid-8">
-        <p>fGrid is a responsive and customisable grid system for Sass styled websites. It's built to be flexible and small and is suitable for a wide range of projects.</p>
+        <p>fGrid is a responsive and customisable grid system for Sass styled websites. A best practice layout system for responsive websites, it's built to be flexible and small and is suitable for a wide range of projects.</p>
         <p class="alpha">
           <strong>Please Note</strong> We're currently specifying and building fGrid, docs are sparse and there's probably some nasty bugs. If you spot issues please <a href="https://github.com/fullaf/fgrid/issues">report them</a>!
         </p>
       </div>
       <div class="grid-4 download">
-        <div class="inner">
-          <a href="https://github.com/fullaf/fgrid"><i class="ion-social-github"></i> Clone on GitHub</a>
-          <a href="https://github.com/fullaf/fgrid/archive/master.tar.gz"><i class="ion-code-download"></i> Download tar.gz</a>
-          <a href="https://github.com/fullaf/fgrid/archive/master.zip"><i class="ion-code-download"></i> Download ZIP</a>
-        </div>
+        <a href="https://github.com/fullaf/fgrid"><i class="ion-social-github"></i> Clone on GitHub</a>
+        <a href="https://github.com/fullaf/fgrid/archive/master.tar.gz"><i class="ion-code-download"></i> Download tar.gz</a>
+        <a href="https://github.com/fullaf/fgrid/archive/master.zip"><i class="ion-code-download"></i> Download ZIP</a>
       </div>
     </div>
 
@@ -201,7 +199,7 @@
       <div class="grid-5">
         <h2>How it works</h2>
         <p>fGrid's core comprises of a set of definitions for a grid and Sass mixins to simplify responsive styling. The HTML layout for this row is shown.</p>
-        <p>fGrid can be used explicitly, as in the example, where fGrid classes are placed in the HTML. Alternately using Sass' <code><span class="tag">@extend</span></code> feature, your own classes can be used.</p>
+        <p>fGrid can be used explicitly, as in the example, where fGrid classes are placed in the HTML. Alternately using Sass' <code><span class="tag">@extend</span></code> or <code><span class="tag">@include</span></code> feature, your own classes can be used.</p>
         <p>This is the preferred approach when the classes used are semantically named, such as <code><span class="class">article</span></code> for the main body of content or <code><span class="class">aside</span></code> for a supplementary item.</p>
       </div>
       <div class="grid-7">
@@ -219,6 +217,24 @@
   &lt;/<span class="tag">div</span>&gt;
 &lt;/<span class="tag">div</span>&gt;</code></pre>
 
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="grid-5">
+        <pre><code><span class="selector">.demo-three-points</span>
+  <span class="include">@include grid-row</span>
+  <span class="selector">.point</span>
+    <span class="include">@include grid-x-col(4)</span>
+  <span class="selector">.big-icon</span>
+    <span class="include">@include respond-up(mob-port)</span>
+      font-size: 164px
+    <span class="include">@include respond-up(tab-port)</span>
+      font-size: 150px</code></pre>
+      </div>
+      <div class="grid-7">
+        <h2>Mixins</h2>
+        <p>Specifying elements to act as grid rows and elements is done using mixins. Adding media dependant declaration is handled using <code><span class="tag">respond-to</span></code>, <code><span class="tag">respond-up</span></code> and <code><span class="tag">respond-down</span></code> mixins.</p>
       </div>
     </div>
 
