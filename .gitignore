@@ -2,3 +2,4 @@
 .sass-cache
 local_files/*
 bower_components/*
+_site

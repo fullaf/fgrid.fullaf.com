@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    fGrid &middot; Sass Responsive Grid System
+  </title>
+  <meta name="description" content="A responsive and customisable grid system for Sass. Built to be flexible and small and is suitable for a wide range of projects.">
+  <meta name="viewport" content="width=device-width, initial- scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Currently experimental feature -->
+  <!-- <div class="abs-position-buttons">
+    I'm abs positioned
+  </div> -->
+  <!-- Here's a wrapper, we want full width backgrounds so the header has its own -->
+  <header class="grid-wrap">
+    <div class="grid-row">
+      <div class="grid-8">
+        <h1>fGrid &middot; Sass Responsive Grid System <span class="tag">alpha</span></h1>
+      </div>
+      <nav class="grid-4">
+       <a href="https://github.com/fullaf/fgrid/issues/1"><i class="ion-bookmark"></i> Docs</a>
+       <a href="https://github.com/fullaf/fgrid/issues/"><i class="ion-bug"></i> Issue Tracker</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Main body of content -->
+  <div class="grid-wrap content">
+
+    <div class="demo-three-points">
+      <!-- No fGrid classes here, instead see the Sass file and use of @extend -->
+      <!-- This is the preferred way of using fGrid, we use the classes in the HTML here to be more helpful as an example. -->
+      <div class="point">
+        <i class="ion-ios7-stopwatch-outline big-icon"></i>
+        <h2>Speed Up Development</h2>
+      </div>
+      <div class="point">
+        <i class="ion-iphone big-icon"></i>
+        <h2>Awesome Responsive Mixins</h2>
+      </div>
+      <div class="point">
+        <i class="ion-paper-airplane big-icon"></i>
+        <h2>Super Lightweight</h2>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="grid-row">
+      <div class="grid-6">
+        <p>&copy; <a href="http://fullaf.com">Full AF</a> 2014, fGrid is released under the <a href="http://fullaf.mit-license.org/">MIT Licence</a></p>
+      </div>
+      <div class="grid-6 responsive-icons">
+        <i class="mob-port ion-iphone"></i>
+        <i class="mob-land ion-iphone"></i>
+        <i class="tab-port ion-ipad"></i>
+        <i class="tab-land ion-ipad"></i>
+        <i class="med-desk ion-monitor"></i>
+        <i class="widescreen ion-ios7-monitor-outline"></i>
+
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
