@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "bourbon": "*",
-    "fgrid": "*"
+    "fgrid": "*",
+    "pygments": "~2.0.1"
   }
 }

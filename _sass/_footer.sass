@@ -1,0 +1,66 @@
+footer
+  padding-top: $base-font-size
+  background: $color-black
+
+  @include respond-up(tab-port)
+    // Extra space for responsive icons
+    padding-top: 30px
+
+  p
+    color: $color-white / 1.2
+    font-size: $base-font-size / 1.5 // For mobile to keep single line
+    @include respond-up(mob-land)
+      font-size: $base-font-size / 1.2
+    a
+      color: $color-white
+      &:hover
+        color: $color-white / 1.2
+
+  .responsive-icons
+    text-align: right
+
+    font-size: 42px
+
+    @include respond-up(mob-land)
+      font-size: 52px
+
+    // This is a bit hacky, used for prettier positioning
+    @include respond-up(tab-port)
+      margin-top: -12px
+      padding-right: 22px
+
+    i
+      color: $color-black-alt
+      &.mob-port
+        @include respond-to(mob-port)
+          color: $color-highlight
+      &.mob-land
+        @include respond-to(mob-land)
+          color: $color-highlight
+        padding: 0 8px
+        &:before
+          @include transform(rotate(90deg))
+      &.tab-port
+        @include respond-to(tab-port)
+          color: $color-highlight
+      &.tab-land
+        @include respond-to(tab-land)
+          color: $color-highlight
+        padding: 0 8px
+        &:before
+          @include transform(rotate(90deg))
+      &.med-desk
+        @include respond-to(med-desk)
+          color: $color-highlight
+      &.widescreen
+        @include respond-to(widescreen)
+          color: $color-highlight
+
+  .grid-6
+    @include respond-down(mob-land)
+      padding-bottom: 0
+
+  p, .responsive-icons
+    @include respond-down(mob-land)
+      text-align: center
+

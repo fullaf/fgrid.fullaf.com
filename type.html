@@ -1,0 +1,118 @@
+---
+title: Type
+layout: default
+---
+<div class="grid-wrap">
+  <div class="grid-row">
+    <div class="grid-12">
+      <hgroup>
+        <h2>Typography Examples</h2>
+        <h3>Examples of type</h3>
+      </hgroup>
+      <p>What follows is a list of HTML elements styled with fGrid's typography mixins. The aim of the typography module is not to dictate any particular style, but rather to encourage typographic best practice through styling tools.</p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="example">
+      <p>Pellentesque ligula ante, tincidunt in tincidunt in, rutrum eget sapien. Aenean velit mi, pellentesque accumsan turpis vel, imperdiet aliquam dolor. Duis sodales dui vitae sem semper, a euismod ex porttitor. Vivamus feugiat sapien pellentesque turpis ultrices, ac rhoncus est varius. Maecenas ac dui id lectus dictum scelerisque. Mauris in urna ac est consequat tincidunt. Suspendisse gravida porttitor bibendum. Nunc iaculis fringilla sem, a lobortis orci fermentum vel. Integer venenatis turpis facilisis, vehicula dui in, gravida magna. Vestibulum convallis, sapien ac fermentum lobortis, libero erat dapibus tortor, vitae convallis elit ipsum ac erat. Duis purus ante, dapibus at magna sit amet, varius rhoncus magna. Vestibulum lacus mauris, ullamcorper vel leo quis, efficitur tempor enim.</p>
+    </div>
+    <div class="explanation">
+      <p>For paragraph text we do little magic.</p>
+      {% highlight sass %}
+p
+  font-size: $base-font-size // Nothing to do with fGrid
+  @include block
+  @include baseline
+      {% endhighlight %}
+      <p>The block and baseline mixins translate to:</p>
+      {% highlight sass %}
+p
+  font-size: $base-font-size // Nothing to do with fGrid
+  margin-bottom: $grid-baseline
+  margin-bottom: $grid-baseline
+      {% endhighlight %}
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="example">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </div>
+    <div class="explanation">
+      <p>The shorthand shown:</p>
+      {% highlight sass %}
+@include headings(1,6)
+  font-weight: 200
+
+@include heading-sizing($base-font-size,4,3.5,3,2.5,2,1.5)
+@include heading-height($baseline,4,3.5,3,2.5,2,1.5)
+      {% endhighlight %}
+
+      <p>Will generate the following Sass</p>
+
+      {% highlight sass %}
+h1, h2, h3, h4, h5, h6
+  font-weight: 200
+
+h1
+  font-size: 68px
+  line-height: 104px
+h2
+  font-size: 59.5px
+  line-height: 91px
+h3
+  font-size: 51px
+  line-height: 78px
+h4
+  font-size: 42.5px
+  line-height: 65px
+h5
+  font-size: 34px
+  line-height: 52px
+h6
+  font-size: 25.5px
+  line-height: 39px
+      {% endhighlight %}
+    </div>
+  </div>
+  <div class="grid-row">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed cursus mauris. Morbi rutrum urna et arcu pellentesque imperdiet. Integer sit amet sem vitae ligula faucibus cursus vel in magna. Pellentesque mattis accumsan auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vehicula nibh id neque fermentum, vel lacinia arcu tempor. Nullam feugiat nec urna sit amet facilisis. Phasellus at pharetra neque. Donec vel mauris eu tellus ultrices vestibulum. Nunc ut pretium sem, in accumsan tortor. Fusce nibh arcu, faucibus luctus malesuada in, tincidunt vel quam.</p>
+
+    <ul>
+      <li>Maecenas vel cursus purus.</li>
+      <li>Etiam ultricies neque id nisl maximus, vestibulum tempor mauris imperdiet.</li>
+      <li>Curabitur a tempor dolor.</li>
+      <li>Ut mollis, risus ut aliquet fermentum, mi felis consectetur massa, sit amet vestibulum metus nunc ut enim.</li>
+      <li>
+        <p>Nunc finibus dui nec nunc posuere, eu dictum tortor imperdiet. Nulla dignissim tellus quis odio commodo, at interdum lacus tincidunt. In blandit, augue sit amet scelerisque ullamcorper, purus purus pulvinar metus, at mattis purus justo sed nisi.</p>
+        <p>Donec ac nibh sed arcu condimentum pharetra.</p>
+      </li>
+      <li>Donec ut commodo ipsum, quis accumsan risus. Donec mattis, augue sit amet faucibus consectetur, ex lectus mattis dolor, quis faucibus felis nisi sed dolor.</li>
+    </ul>
+
+    <blockquote>
+      <p>Morbi auctor, tellus nec ultrices sagittis, lacus purus consequat enim, eu laoreet nulla diam quis est. Quisque erat odio, tempus in arcu vel, pellentesque fermentum est. Nunc porta blandit ultrices. Phasellus aliquet tincidunt commodo. Nullam vitae magna ac nisi eleifend condimentum. Nam tincidunt sem ac risus fermentum, et viverra nibh feugiat. Nam sollicitudin velit a varius venenatis. Aliquam ultricies sodales varius. Quisque rhoncus libero nec faucibus convallis. Pellentesque fermentum ligula iaculis, sagittis dolor quis, fermentum mauris. Nulla facilisis ex velit, quis euismod turpis tempor quis. Aliquam luctus sodales malesuada. Fusce auctor mauris nec efficitur convallis. Nunc sit amet risus eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus tincidunt ultricies bibendum.</p>
+    </blockquote>
+
+    <p>Mauris sollicitudin iaculis leo, ac hendrerit ligula finibus eget. Suspendisse congue, elit et ultrices facilisis, est odio lacinia odio, at elementum massa orci id dui. Fusce efficitur venenatis ligula, at faucibus lectus dictum eget. Pellentesque dictum sit amet enim quis dapibus. Proin eleifend consectetur felis non ultrices. Nunc a metus convallis, malesuada ligula eget, mollis justo. Quisque turpis tortor, mollis eu metus sit amet, lobortis commodo eros. Maecenas facilisis, ex varius semper tempor, turpis purus dapibus felis, non rhoncus quam nisl sed nibh. Praesent fermentum nibh vel neque scelerisque euismod. Cras hendrerit fringilla nibh, ut ultrices nisl ultricies vitae. Vivamus tempor posuere turpis a vehicula. Curabitur lacus ex, fermentum nec laoreet ac, tincidunt ut mi. Aliquam erat volutpat.</p>
+
+    <p>Integer non lacus quis sem consectetur tristique. Cras massa libero, tristique ut bibendum quis, semper id augue. Cras mollis leo et sem varius porttitor. Maecenas lobortis semper viverra. Pellentesque auctor cursus mi a cursus. Nullam sed lectus ac elit lacinia egestas sit amet in ipsum. Nulla dapibus fringilla lorem vitae interdum.</p>
+
+    <div class="grid-6">
+      <p>These are grid elements sitting beneath a block of <em>'out of grid'</em> content. This behaves well.</p>
+      <p>Phasellus ultricies felis nisi, eget finibus libero eleifend nec. Vivamus commodo tortor non sodales laoreet. Donec ut tellus nec nisl lacinia efficitur. Praesent eu bibendum augue. Proin ut eros non elit rhoncus varius quis et est. Mauris ut ornare elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam tempor fringilla est sed suscipit.</p>
+    </div>
+    <div class="grid-6">
+      <p>Vestibulum vestibulum felis posuere, finibus massa quis, iaculis quam. Cras in vehicula ex, eget suscipit ligula. Vestibulum eget tortor consequat, molestie odio rhoncus, tempus eros. Donec et ligula sit amet lorem imperdiet luctus at vel lorem. Etiam vel commodo elit. Sed eu arcu neque. Donec finibus lobortis nisl sed efficitur. Nulla facilisi. In vitae ligula eget dolor aliquam molestie. Aenean faucibus porttitor nibh, sed facilisis diam rutrum id. Aliquam dictum lobortis eros, sit amet gravida ipsum sodales at. Duis at neque id lorem suscipit malesuada. Nam nec quam vestibulum, lacinia risus et, semper lacus. Nunc sit amet ornare tellus.</p>
+    </div>
+
+
+  </div>
+
+</div>

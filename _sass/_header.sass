@@ -1,0 +1,48 @@
+.site-header
+  background: $color-theme
+  padding: 32px 0 $base-font-size/2 0
+  margin-bottom: $base-font-size !important // Issue #4
+  .contents
+    @include grid-wrap
+    @include grid-row
+    padding-bottom: 0
+  .title
+    @include grid-x-col(6)
+  .nav
+    @include grid-x-col(6)
+  h1
+    font-size: 30px
+    font-weight: 500
+    line-height: 1em
+    color: $color-white
+  .tag
+    display: inline-block
+    background: #F1A42C
+    color: $color-theme
+    font-weight: 600
+    line-height: 1.4em
+    padding: 2px 6px
+    font-size: 11px
+    position: relative
+    top: -24px
+  .alpha
+    padding: 9px
+    background: $color-highlight
+  nav
+    @include respond-up(tab-port)
+      text-align: right
+      vertical-align: center
+    a
+      color: $color-white
+      display: inline-block
+      padding: 6px 16px
+      background: $color-black
+      text-decoration: none
+      opacity: 0.8
+      i
+        color: $color-white
+        padding-right: 4px
+      &:hover
+        color: $color-white
+        // background: $color-black-alt
+        opacity: 1

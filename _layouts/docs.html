@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="docs">
+  <nav class="docs-toc">
+    <h4>Docs</h4>
+    <ul>
+    {% for doc_page in site.docs | sort:order %}
+      <li><a {% if page.url == doc_page.url %}class="current" {% endif %}href="{{doc_page.url}}">{{doc_page.title}}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+  <div class="docs-content">
+    {{ content }}
+  </div>
+</div>

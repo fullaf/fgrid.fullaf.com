@@ -4,22 +4,37 @@
 @charset "utf-8"
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif
-$base-font-size:   16px
+$header-font-family: Helvetica, Arial, sans-serif
+$text-font-family: Helvetica, Arial, sans-serif
+$base-font-size:   17px
 $small-font-size:  $base-font-size * 0.875
-$base-line-height: 1.5
+$baseline: 27px
 
-$spacing-unit:     30px
+$color-white: #f6f6f6
+$color-black: #222
+$color-black-alt: #666
 
-$text-color:       #111
-$background-color: #fdfdfd
-$brand-color:      #2a7ae2
+$color-theme: #4D3561
+$color-highlight: #F1A42C
+$color-minimal: #e7e7e7
 
-$grey-color:       #828282
-$grey-color-light: lighten($grey-color, 40%)
-$grey-color-dark:  darken($grey-color, 25%)
+$color-stop: #E84343
+$color-go: #66D133
+
+$color-grey:       #828282
+$color-grey-light: lighten($color-grey, 40%)
+$color-grey-dark:  darken($color-grey, 25%)
+
+$grid-baseline: $baseline
 
 @import "bower_components/bourbon/dist/bourbon"
 @import "bower_components/fgrid/fgrid"
 
-@import "_sass/style"
+@import "_sass/type"
+@import "_sass/syntax-highlighting"
+@import "_sass/layout"
+@import "_sass/elements"
+
+@import "_sass/header"
+@import "_sass/footer"
+@import "_sass/docs"

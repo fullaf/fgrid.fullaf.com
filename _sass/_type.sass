@@ -1,0 +1,61 @@
+::selection
+  background: #cd679a
+  color: $color-white
+::moz-selection
+  @extends ::selection
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: $base-font-size
+
+@include headings(1,6)
+  font-weight: 200
+
+@include heading-sizing($base-font-size,4,3.5,3,2.5,2,1.5)
+@include heading-height($baseline,4,3.5,3,2.5,2,1.5)
+
+p
+  font-size: $base-font-size
+  @include block
+  @include baseline
+
+a
+  color: $color-black * 1.3
+  &:hover
+    color: $color-black * 2
+
+ul, ol
+  @include block
+  margin-left: $base-font-size * 2
+
+pre
+  @include block
+  background: $color-black
+  padding: $base-font-size
+  color: $color-white
+  white-space: pre-wrap
+  word-wrap: break-word
+  font-size: $base-font-size / 1.1
+  line-height: $base-font-size * 1.2
+  code
+    color: $color-white / 1.1
+    padding: none
+    font-size: 1rem
+    background: none
+
+code
+  font-family: "Ubuntu Mono", monospace
+  background: $color-grey-light
+  font-size: 0.9rem
+  padding: 0.1rem 0.3rem
+  .tag
+    color: $color-stop
+    font-weight: bold
+  .attr
+    color: $color-go
+  .class
+    color: $color-highlight
+  .selector
+    color: $color-go
+  .include
+    color: $color-stop
